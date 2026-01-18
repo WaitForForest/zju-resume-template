@@ -96,60 +96,67 @@
   \begin{tikzpicture}[remember picture, overlay] 
     \node[anchor = north west] at ($(current page.north west)+(0.5cm,+1.0cm)$) {\includegraphics[height=6cm]{zju.png}};
   \end{tikzpicture}%
-\centerline{\LARGE\bfseries{胡豆}} 
+\centerline{\LARGE\bfseries{刘思琪}} 
 
-\centerline{\normalsize{\faPhone\ 111-1111-1111 \quad \faEnvelopeO\ \href{mailto:3230100000@zju.edu.cn}{3230100000@zju.edu.cn}}} 
-
-\centerline{\normalsize{\faGithubSquare\ \href{https://github.com/maksymilan}{https://github.com/maksymilan} \quad \faRssSquare\ \href{https://maksymilan.github.io/}{https://maksymilan.github.io}}} 
+\centerline{\normalsize{\faPhone\ 158-1731-3220 \quad \faEnvelopeO\ \href{mailto:3230105088@zju.edu.cn}{3230100000@zju.edu.cn}}} 
     
 \section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育背景}    
 \textbf{浙江大学} \hfill 2023.9 -- 至今\\[0.5em] % 标题和正文间加一点距离
-CC98烂坑挖掘工程与技术\quad 大二 
+自动化（控制）\quad 大三 
 \begin{itemize}[nosep]
-    \item 相关课程：《烂坑挖掘及基础》、《高级挖坑技巧》、《烂坑数理统计》
+    \item 相关课程：《自动控制原理》、《现代控制理论》、《空中机器人》、《人工智能与机器学习》、《运动控制》
 \end{itemize}
 
 \section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ 项目经历}
 
 % --- 第一个项目 ---
 % 将标题行末尾的 \\ 替换为 \titlebreak 命令
-\textbf{98烂坑风控与可视化作战平台} \hfill 2024.08 -- 至今 \titlebreak
-项目描述：为维护cc98社区的讨论纯度、净化“心灵之约”版块风气，本项目旨在对“烂坑”进行科学、严谨的量化分析，并引入\textbf{大语言模型(LLM)}对烂坑帖进行\textbf{自动化情感极性与“离谱指数”标注}。
+\textbf{基于自然语言引导的视觉语义导航} \hfill 2025.06 -- 至今 \titlebreak
+项目描述：为面向移动机器人的自然语言视觉语义导航系统，融合 ROS、YOLO 与视觉语言模型，实现从自然语言指令到自主导航执行的多模态闭环。
 % 在 itemize 的选项中，使用 topsep=\intraProjectListTopSep 来控制上边距
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{数据与后端}：运用 \textbf{Go} 语言及 \textbf{GORM} 框架，实现对全站“烂坑”帖的7x24小时全天候\textbf{抓取}与\textbf{入库}(MySQL)。
-    \item \textbf{可视化前端}：采用原生 \textbf{HTML/CSS/JS} 构建了“烂坑”实时监控\textbf{作战大屏}。实现了坑主成分分析、挖坑热力图、年度烂坑王榜单等\textbf{可视化图表}，并通过 \textbf{AJAX} 异步刷新，确保数据洞察的实时性。
-    \item \textbf{核心产出}：全面掌握了从\textbf{数据采集、清洗、LLM标注到可视化分析}的“反烂坑”全链路技术。
+    \item \textbf{系统与平台}：基于 \textbf{Ubuntu + ROS1 Noetic + Gazebo} 搭建完整机器人仿真平台，完成 \textbf{TurtleBot3} 模型部署、传感器配置、SLAM 建图与导航栈集成，构建可复现的语义导航实验环境。
+    \item \textbf{多模态感知与理解}：集成 \textbf{YOLO} 实现环境中目标的实时检测与位姿输出，并引入 \textbf{视觉语言模型（VLM-Qwen）}，实现图像描述、语义问答与多模态推理，提升系统整体语义理解能力。
+    \item \textbf{语义导航与规划}：设计基于 \textbf{LLM} 的自然语言指令解析与动作规划框架，实现从\textbf{自然语言输入 → 语义理解 → 路径规划 → 导航执行}的完整闭环，支持“找到沙发 / 冰箱”等语义导航任务。
+\end{itemize}
+
+
+% 使用 \projectsep 命令来分隔两个项目
+\projectsep
+
+% --- 第二个项目 ---
+\textbf{基于数学优化的超市布局利润最大化研究 (Agent)} \hfill 2025.06 \titlebreak
+项目描述：基于整数规划与动态规划构建超市商品布局与运营优化模型，通过考虑人流动态与连通性约束，实现长期利润最大化决策。
+\begin{itemize}[nosep, topsep=\intraProjectListTopSep]
+    \item \textbf{问题建模}：将超市抽象为 \textbf{5×5 网格布局模型}，引入初始人流量矩阵、商品购买率、单价及人流影响系数等参数，建立以\textbf{利润最大化}为目标的数学优化模型。
+    \item \textbf{布局优化方法}：设计两种商品连通性约束方案——\textbf{基于图论的严格连通性约束}与\textbf{基于最小外接矩形的罚函数约束}，在保证合理布局的同时提升模型可解性与实际适用性。
+    \item \textbf{人流动态建模}：考虑商品布局对顾客行为的反馈效应，构建\textbf{人流量动态更新机制}，重新定义全局人流矩阵，使模型更贴近真实超市运营场景。
+    \item \textbf{长期规划与求解}：结合 \textbf{整数规划、非线性规划} 与 \textbf{动态规划} 方法，制定 \textbf{3 年超市装修与维护策略}，并使用 \textbf{Gurobi} 求解器获得最优利润方案。
 \end{itemize}
 
 % 使用 \projectsep 命令来分隔两个项目
 \projectsep
 
 % --- 第二个项目 ---
-\textbf{AIGC驱动的超进化自动挖坑机 (Agent)} \hfill 2025.02 -- 至今 \titlebreak
-项目描述：为探索心灵版规的边界，以及测试版主锁沉反应速度的极限，本项目基于\textbf{多智能体协作(MCP)与LLM}技术，开发了一款能\textbf{自主“挖坑”与“互坑”}的AI Agent。
+\textbf{工控信息物理系统（ICPS）数据安全防护方案设计} \hfill 2025.06 \titlebreak
+项目描述：构建面向 ICPS 的分层安全通信架构，通过标准密码算法组合实现多层级数据机密性、完整性与身份认证保障。
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{并发与调度}：后端采用 \textbf{Go} 语言，充分利用 \textbf{Goroutine} 和 \textbf{Channel} 的高并发模型，模拟\textbf{用户并发在线}，执行定时挖坑，确保挖坑行动的\textbf{隐蔽性}与\textbf{高效性}。
-    \item \textbf{实时监控与响应}：运用 \textbf{WebSocket} 协议实现了对目标帖子的\textbf{实时监听与交互}。确保在烂坑被识破的第一时间，Agent能光速完成\textbf{“lktp”}或\textbf{反向钓鱼}操作，展现出极高的AI博弈能力。
-    \item \textbf{可视化GUI}：前端使用 \textbf{React} 框架构建了\textbf{后台管理的可视化面板 (Admin Panel)}。可一键下达挖坑指令、动态调整Agent的\textbf{指令}、并实时监控数据。
+    \item \textbf{系统建模与需求分析}：基于典型 \textbf{工业控制信息物理系统（ICPS）分层架构}，分析管理层、监控层与控制层的通信特性与安全威胁，明确不同层级对\textbf{机密性、完整性与身份认证}的差异化需求。
+    \item \textbf{分层加密方案设计}：遵循\textbf{分层防护、按需加密}原则，设计纵向与横向相结合的安全通信方案，组合采用 \textbf{TLS 1.3、AES-256-GCM 与 HMAC-SHA256} 实现多层级数据防护。
+    \item \textbf{安全机制实现}：基于 \textbf{Python} 实现 TLS 加密通信、对称加密与消息认证机制，完成证书管理、加密传输、完整性校验等核心功能的原型开发与集成。
 \end{itemize}
+
 
 \section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 技术栈}
 \begin{itemize}[nosep]
     \item \textbf{编程语言：} \textbf{Go}, Python, C++
-    \item \textbf{开发工具：} SSH, Git, Vim, MakeFile,LaTex
+    \item \textbf{开发工具：}  Git, MakeFile,LaTex
     \item \textbf{操作系统：} Linux
-\end{itemize}
-\section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faList}\ 获奖情况}
-\begin{itemize}
-    \item CC98年度用户 \hfill 2023.12
-    
 \end{itemize}
     
 \section{\makebox[\widthof{\faInfo}][c]{\color{CVBlue}\faInfo}\ 其他}
 \begin{itemize}[parsep=0.5ex]
-    \item \textbf{技术博客：} \href{https://maksymilan.github.io/}{https://maksymilan.github.io/}
-    \item \textbf{GitHub：} \href{https://github.com/maksymilan}{https://github.com/maksymilan} 
-    \item \textbf{英语水平：} CET-4, CET-6
+    \item \textbf{兴趣爱好：} 运动、看电影、旅行
+    \item \textbf{英语水平：} CET-4, CET-6,IELTS
 \end{itemize}
 \end{document}
